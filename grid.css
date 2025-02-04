@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+.container{
+    background:#0c1117;
+    padding:15px 9%;
+    padding-bottom: 120px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:5% ;
+    padding-right:5% ;
+    margin-bottom: 10px;
+    height: 70px;
+  }
+  .logo{
+    font-size: 30px;
+    color:white;
+  }
+  .logo span{
+    color:#003ADB;
+    font-family: 'Lobster', cursive;
+  }
+  
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+  }
+  nav ul li a:hover{
+    color:#003ADB;
+    transition: 0.5s;
+  }
+  nav button{
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    border:none;
+    background:#003ADB;
+    color:white;
+    font-size: 15px;
+  }
+  nav button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color:#fff;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font: size 25px;
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+}
+
+.container .box-container .box {
+    background-image: url('image/test.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-color:#0c1117;
+    /* text-align: center; */
+    padding: 45px 35px;
+  }
+
+.container .box-container .box img{
+    height: 80px;
+}
+
+.container .box-container .box h3{
+    color:#fff;
+    font-size: 22px;
+    padding:1px 0;
+}
+
+.container .box-container .box p{
+    color:#fff;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.container .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background:#1b2837;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.container .box-container .box .btn:hover{
+    color: #000;
+    padding: 5px;
+    border-radius: px;
+    background-color: aliceblue;
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .container{
+        padding:20px;   
+    }
+}

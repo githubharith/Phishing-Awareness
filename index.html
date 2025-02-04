@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="box">
+        <nav>
+          <h2 class="logo">Secure <span>Bit</span></h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://shorturl.at/bdhtx">Report Event</a></li>
+            <li><a href="#" onclick="openGmailCompose();">Contact Us</a></li>
+          </ul>
+          <button>Sign In</button>
+        </nav>
+        </div>
+
+    <div class="box-container">
+
+        <div class="box">
+    
+            <h3>Web Walker</h3>
+            <p>Walks through some Information gathering websites</p>
+            <a href="https://www.whois.com/whois/" class="btn">Visit</a>
+        </div>
+
+        <div class="box">
+            <h3>Digtal footprint</h3>
+            <p>Can used analyse the digital footprints we leave behind in the internet</p>
+            <a href="https://www.saymine.com/" class="btn">Visit</a>
+        </div>
+
+        <div class="box">
+            <h3>Malware Scanner</h3>
+            <p>All-in-one page the analyse the files, urls and Domains</p>
+            <a href="https://www.virustotal.com/gui/home/url" class="btn">Visit</a>
+        </div>
+
+        <div class="box">
+            <h3>My Account</h3>
+            <p>Directs to google account and manage the devices that contains their account</p>
+            <a href="https://myaccount.google.com/security" class="btn">Visit</a>
+        </div>
+
+        <div class="box">
+            <h3>Cyber gov</h3>
+            <p>Register your cyber complain in official government page </p>
+            <a href="https://cybercrime.gov.in/" class="btn" target="_blank">Visit</a>
+        </div>
+        <div class="box">
+            <h3>For you</h3>
+            <p>Here is something for you</p>
+            <a href="quiz.html" class="btn">Visit</a>
+        </div>
+        <div class="box">
+            <h3>Resource</h3>
+            <p>Community to share usefull resource</p>
+            <a href="resource.html" class="btn" target="_blank">Visit</a>
+        </div>
+    </div>
+</div>
+<script>
+function openGmailCompose() {
+  var recipient = "cybersecurity@bitsathy.ac.in";
+  var subject = "From Secure Bit";
+  var currentDate = new Date();
+  var formattedDate = currentDate.toDateString();
+  var body = "\n\nDate: " + formattedDate;
+  var gmailComposeLink = "https://mail.google.com/mail/?view=cm&to=" + encodeURIComponent(recipient) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  window.open(gmailComposeLink);
+}
+</script>
+</body>
+</html>

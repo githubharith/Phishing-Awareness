@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Quiz</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function checkAnswer(isPhishing) {
+      var imageDivs = document.querySelectorAll("li img");
+      var buttonDivs = document.querySelectorAll("li button");
+      var heading = document.querySelector("h3");
+      var resultDiv = document.getElementById("result");
+
+      if (isPhishing) {
+        imageDivs.forEach(function(imageDiv) {
+          imageDiv.style.display = "none";
+        });
+
+        buttonDivs.forEach(function(buttonDiv) {
+          buttonDiv.style.display = "none";
+        });
+
+        heading.style.display = "none";
+
+        resultDiv.textContent = "Congratulations! You found the phishing email.";
+
+        // Redirect to home page after 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+          window.location.href = "index.html";
+        }, 3300);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <h3>Which of the following emails is a phishing email?</h3>
+    <ul>
+      <li>
+        <img src="image/normal.png" alt="Normal Email" style="height: 377px;width: 666px;">
+        <button onclick="checkAnswer(false)">Select</button>
+      </li>
+      <li>
+        <img src="image/scam.png" alt="Phishing Email" style="height: 377px;width: 666px;">
+        <button onclick="checkAnswer(true)">Select</button>
+      </li>
+    </ul>
+  </div>
+  <div id="result"></div>
+</body>
+</html>
